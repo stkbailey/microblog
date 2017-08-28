@@ -1,0 +1,14 @@
+# Create conda environment
+conda create --name flask python=3.6
+
+# install appropriate files
+pip install flask flask-login flask-openid flask-mail flask-sqlalchemy sqlalchemy-migrate flask-whooshalchemy flask-wtf flask-babel guess_language flipflop coverage
+
+# Set up folders
+mkdir C:\\Users\\stkba\\OneDrive\\Documents\\microblog
+cd C:\\Users\\stkba\\OneDrive\\Documents\\microblog
+mkdir app
+mkdir app/static
+mkdir app/templates
+mkdir tmp
+
