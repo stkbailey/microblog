@@ -24,7 +24,6 @@ class User(db.Model):
 		except NameError:
 			return str(self.id) # python 3
 
-
 	def __repr__(self):
 		return r'<User {r}>'.format(self.nickname)
 

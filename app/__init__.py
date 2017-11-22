@@ -1,13 +1,11 @@
 
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-
 app = Flask(__name__)
 app.config.from_object('config')
-db = SQLAlchemy(app)
 
-# Import Database
-from app import views, models
+# Setup Database
+from flask_sqlalchemy import SQLAlchemy
+db = SQLAlchemy(app)
 
 # Config Login Systems
 import os 
@@ -19,3 +17,6 @@ lm = LoginManager()
 lm.init_app(app)
 lm.login_view = 'login'
 oid = OpenID(app, os.path.join(basedir, 'tmp'))
+
+# Import Database
+from app import views, models
